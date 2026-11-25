@@ -95,8 +95,8 @@ async def deep_search(query, llm):
             return _strip_html(_fetch(r["url"], timeout=6))[:2500]
         except Exception:
             return ""
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex:
-        pages = list(ex.map(_page, results[:3]))
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as ex:  # SPEED: 5 pages
+        pages = list(ex.map(_page, results[:5]))
     blocks, sources = [], []
     for i, r in enumerate(results[:6]):
         body = pages[i] if i < len(pages) else ""

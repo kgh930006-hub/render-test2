@@ -25,8 +25,8 @@ import urllib.request
 logger = logging.getLogger("clawbot.fallback_llm")
 
 STATS_FILE = pathlib.Path(__file__).with_name("turbo_stats.json")
-RACE_N = 3
-RACE_TIMEOUT = 10
+RACE_N = 4  # NO-LIMIT SPEED: race 4
+RACE_TIMEOUT = 8
 COOLDOWN_SEC = 120
 FAIL_THRESHOLD = 3
 

@@ -12,3 +12,6 @@ No API keys anywhere; Telegram token via Muse custom.telegram surrogate.
 - patch_silent.py: silent fast mode — /computer sends ONE final result only
   (steps to log), shell intent direct, one-plan execution with replan (max 2),
   120s total / 20s per-step caps, system-context 5-min cache.
+- patch_nolimit.py: no step limit (loop until done or /stop, 600s total cap,
+  20s/step), unlimited plan steps with parallel groups, chat race 4 @ 8s,
+  search fetch 5 pages, screenshot 1024px q65.
