@@ -9,3 +9,6 @@ Patches for clawbot-plus 2.2.2 running on Linux VM (bot io @Tetris19730Bot).
   /remember /memory /forget /remind, photo VL handler, computer loop max 5 steps).
 Apply: run patch_turbo.py against the venv telegram_bot.py (backs up + diffs).
 No API keys anywhere; Telegram token via Muse custom.telegram surrogate.
+- patch_silent.py: silent fast mode — /computer sends ONE final result only
+  (steps to log), shell intent direct, one-plan execution with replan (max 2),
+  120s total / 20s per-step caps, system-context 5-min cache.
