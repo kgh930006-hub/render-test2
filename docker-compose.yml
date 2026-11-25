@@ -1,0 +1,13 @@
+services:
+  memory-bot:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MEMORY_DB_PATH: /app/data/memories.db
+    volumes:
+      - memory-data:/app/data
+
+volumes:
+  memory-data:
